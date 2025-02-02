@@ -1,0 +1,198 @@
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all     : unset;
+    display : revert;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing : border-box;
+}
+
+a, button {
+    cursor : revert;
+}
+
+ol, ul, menu {
+    list-style : none;
+}
+
+img {
+    max-inline-size : 100%;
+    max-block-size  : 100%;
+}
+
+table {
+    border-collapse : collapse;
+}
+
+input, textarea {
+    -webkit-user-select : auto;
+}
+
+textarea {
+    white-space : revert;
+}
+
+::placeholder {
+    color : unset;
+}
+
+::marker {
+    content : initial;
+}
+
+:root {
+    /* Cosmic Neutrals */
+    --deep-space-black     : #0D1117;
+    --lunar-gray           : #8C8C8C;
+    --starlight-silver     : #E6E6E6;
+
+    /* Nebula Tones */
+    --andromeda-purple     : #6A5ACD;
+    --orion-blue           : #4169E1;
+    --magellanic-green     : #2E8B57;
+
+    /* Stellar Accents */
+    --solar-flare-orange   : #FF4500;
+    --supernova-red        : #DC143C;
+    --comet-tail-teal      : #20B2AA;
+
+    /* Ethereal Highlights */
+    --plasma-white         : #F8F8FF;
+    --cosmic-dust-lavender : #E6E6FA;
+    --ionosphere-azure     : #87CEEB;
+
+}
+
+body {
+    line-height: 1.5;
+    background  : black;
+    color       : white;
+    font-size   : 1rem;
+    font-family : "Inter", sans-serif, Arial;
+}
+
+.header-container {
+    height           : 100px;
+    width            : 100%;
+    font-weight      : 700;
+    background-color : var(--deep-space-black);
+}
+
+/*Landing Banner 1*/
+.banner-landing {
+    display          : flex;
+    flex-direction   : column;
+    width            : 100vw;
+    height          : 100vh;
+}
+
+.banner-figure {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+}
+
+.banner-figure figcaption {
+    order : 1;
+    color : whitesmoke;
+    font-size: 1.5rem;
+}
+.banner-figure img {
+    width : 100%;
+    object-fit: cover;
+}
+.landing-banner{
+    display  : flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    gap: 20px;
+}
+.landing-banner h1{
+    font-size: 6rem;
+    font-weight: 700;
+}
+.landing-banner p{
+    font-size : 2.5rem;
+}
+.banner-figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-figure img {
+    width: 100%;
+    margin-top: 10%;
+    transform: scale(1.5) translate(5%,15%);
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.mission{
+    font-size: 6rem;
+    position: relative;
+    text-align: center;
+}
+
+.mission img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.mission-banners{}
+.mission h1{
+    position : absolute;
+    top : 85%;
+    left : 50%;
+    font-size: 5rem;
+    transform: translate(-50%,-50%);
+    background-color: var(--deep-space-black);
+    width: 50%;
+}
+
+
+.missions p{
+    padding-right: 5%;
+    padding-left: 5%;
+    color: lightgray;
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.info-container figure figcaption {
+    margin-bottom: 5%;
+    font-size: 3rem;
+    text-align: center;
+}
+.trajectory{
+    display: flex;
+    flex-direction: column;
+}
+
+.legend{
+    display: flex;
+    gap: 1rem;
+}
+
+.square{
+    display: flex;
+    width : 30px;
+    height : 30px;
+    background-color: red;
+    align-self: center;
+}
+.legend-item{
+    display: flex;
+    align-items: center;
+}
+
+.passby{
+
+}
+
+.passby img{
+    width: 100%;
+}
