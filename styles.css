@@ -64,6 +64,9 @@ textarea {
     --ionosphere-azure     : #87CEEB;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     line-height: 1.5;
@@ -85,7 +88,9 @@ body {
     display          : flex;
     flex-direction   : column;
     width            : 100vw;
-    height          : 100vh;
+    height          : 80vh
+
+
 }
 
 .banner-figure {
@@ -195,4 +200,58 @@ body {
 
 .passby img{
     width: 100%;
+}
+
+
+.sliding-menu {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;     /* Firefox */
+}
+
+.sliding-menu-content {
+    display: flex;
+    gap: 10px;
+    width: 200%; /* Adjust based on the number of items */
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.slide-container {
+    flex: 0 0 33.333%; /* Adjust based on the number of items */
+    width: 25%; /* Adjust based on the number of items */
+    scroll-snap-align: start;
+    position: relative; /* Added for positioning the overlay */
+
+}
+
+.slide-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures no extra space below the image */
+}
+
+/* New styles for the gradient overlay */
+.slide-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 60%; /* Control the height of the gradient here */
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    pointer-events: none;
+}
+
+.planet-name{
+    position : absolute;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    top: 90%;
+    z-index: 1;
+    font-size: 3.5rem;
+    font-weight: 700;
+
 }
